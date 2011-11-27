@@ -1,0 +1,32 @@
+TYPOlight Forum and Helpdesk - License Conditions
+-------------------------------------------------
+
+This software was developed by Peter Koch (Acenes) and is property of:
+
+	IBK Software AG
+	Bondastrasse 45
+	7000 Chur
+	Switzerland
+
+Author Contact:
+
+	By email: peter@typolight.org
+	In the TYPOlight forum at http://www.typolight.org: username "Acenes"
+
+Disclaimer:
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+	
+Licenses and distribution conditions:
+
+	GNU Public License Version 3 as published by the Free Software 
+	Foundation. See the file GPL3.txt for details. You should have 
+	received this file with the GNU General Public License along with 
+	this program. If not, see http://www.gnu.org/licenses/
+
+---
+Chur, 2008-06-30 
+Peter Koch
+IBK Software AG

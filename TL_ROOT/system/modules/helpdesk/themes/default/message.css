@@ -1,0 +1,320 @@
+/**
+ * TYPOlight Helpdesk :: Message display styles
+ *
+ * NOTE: this file was edited with tabs set to 4.
+ * @package Helpdesk
+ * @copyright Copyright (C) 2007, 2008 by Peter Koch, IBK Software AG
+ * @license See accompaning file LICENSE.txt
+ */
+
+.helpdesk-lastedit
+{
+	font-size:9px;
+	color:#f66;
+	margin:5px 0 0 0;
+	text-align:center;
+}
+
+.helpdesk-signatureblock
+{
+	margin:5px 0 0 0;
+	padding:5px 0 0 0;
+	border-top:1px dashed #ccc;
+}
+
+.helpdesk-message
+{
+	font-family:Verdana,"DejaVu Sans",sans-serif;
+	line-height:1.4em;
+	overflow:hidden;
+}
+
+.helpdesk-message h1,
+.helpdesk-message h2,
+.helpdesk-message h3,
+.helpdesk-message h4,
+.helpdesk-message h5
+{
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	color:#555555;
+	margin:10px 0;
+	padding:0;
+}
+
+.helpdesk-message h1
+{
+	font-size:20px;
+	border-bottom:1px solid #555555;
+}
+
+.helpdesk-message h2
+{
+	font-size:18px;
+}
+
+.helpdesk-message h3
+{
+	font-size:16px;
+}
+
+.helpdesk-message h4
+{
+	font-size:14px;
+}
+
+.helpdesk-message h5
+{
+	font-size:13px;
+}
+
+.helpdesk-message .underlined
+{
+	text-decoration:underline;
+} 
+
+.helpdesk-message .striked
+{
+	text-decoration:line-through;
+} 
+
+.helpdesk-message small
+{
+	font-size:9px;
+} 
+
+.helpdesk-message big
+{
+	font-size:18px;
+} 
+
+.helpdesk-message .raw
+{
+	margin:0;
+	padding:0;
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+.helpdesk-message  .rightaligned
+{
+	text-align:right;
+}
+
+.helpdesk-message  .centered
+{
+	text-align:center;
+}
+
+.helpdesk-message  .justified
+{
+	text-align:justify;
+}
+
+.helpdesk-message .titlebar
+{
+	height:20px;
+	padding:0 5px;
+	margin:0;
+	font-weight:bold;
+}
+
+.helpdesk-message .titlebar *
+{
+	vertical-align:middle;
+}
+
+.helpdesk-message .titlebar .icon
+{
+	padding:0 5px 0 0;
+}
+
+.helpdesk-message .scrollbox
+{
+	padding:5px;
+	overflow:auto;
+}
+
+.helpdesk-message .quotebox,
+.helpdesk-message .notebox,
+.helpdesk-message .warnbox,
+.helpdesk-message .codebox
+{
+	margin:5px;
+	padding:0;
+}
+
+/**
+ * Edit
+ */
+.helpdesk-message  .edit 
+{
+	color:#777; 
+	font-weight:normal; 
+	font-family:"Courier New", Courier, monospace;
+	font-size:9px;
+}
+
+/**
+ * Quote box
+ */
+.helpdesk-message .quotebox
+{
+	border:1px solid #b3bacc;
+	background-color:#eee; 
+}
+
+.helpdesk-message .quotebox-titlebar,
+.helpdesk-message .quotebox-text
+{
+	color:#000;
+	background-color:#b3bacc; 
+	border-top:1px solid #b3bacc;
+}
+
+/**
+ * Note box
+ */
+.helpdesk-message .notebox
+{
+	border:1px solid #ffdead;
+	background-color:#ffffe0; 
+}
+
+.helpdesk-message .notebox-titlebar,
+.helpdesk-message .notebox-text
+{
+	color:#0062c8;
+	background-color:#ffdead; 
+	border-top:1px solid #ffdead;
+}
+
+/**
+ * Warn box
+ */
+.helpdesk-message .warnbox
+{
+	border:1px solid #d87093;
+	background-color:#fff0f4; 
+}
+
+.helpdesk-message .warnbox-titlebar,
+.helpdesk-message .warnbox-text
+{
+	color:#ff0;
+	background-color:#d87093; 
+	border-top:1px solid #d87093;
+}
+
+/**
+ * Code box
+ */
+.helpdesk-message .codebox
+{
+	border:1px solid #a9a9a9;
+	background-color:#fff; 
+}
+
+.helpdesk-message .codebox-titlebar,
+.helpdesk-message .codebox-text
+{
+	color:#fff;
+	background-color:#a9a9a9; 
+	border-top:1px solid #a9a9a9;
+} 
+
+/**
+ * Pre
+ */
+.helpdesk-message .preformated
+{
+	margin:0;
+	padding:0;
+}
+
+.helpdesk-message .preformated *
+{
+	margin:0;
+	padding:0;
+}
+
+.helpdesk-message .preformated .scrollbox
+{
+	overflow:auto;
+}
+
+/**
+ * Tables
+ */
+.helpdesk-message  .table1,
+.helpdesk-message  .table2
+{ 
+	margin:1px;
+}
+
+.helpdesk-message  .table1,
+.helpdesk-message  .table1 td,
+.helpdesk-message  .table1 th,
+.helpdesk-message  .table2,
+.helpdesk-message  .table2 td,
+.helpdesk-message  .table2 th
+{
+	border:1px solid #bbb;
+	padding:2px 5px;
+}
+
+.helpdesk-message  .table0 th,
+.helpdesk-message  .table1 th,
+.helpdesk-message  .table2 th
+{
+	background-color:#f0f4f8;
+	text-align:left;
+	font-weight:bold;
+}
+
+.helpdesk-message  .table1
+{
+	border-spacing:0;
+	border-collapse:collapse;
+}
+
+.helpdesk-message  .table2
+{
+	border-spacing:2px;
+}
+
+.helpdesk-message  .table0,
+.helpdesk-message  .table0 td,
+.helpdesk-message  .table0 th
+{
+	border:none;
+}
+
+/**
+ * GeSHi Syntax Highlighting
+ */
+.helpdesk-code .de1, .helpdesk-code .de2 {font-family: 'Courier New', Courier, monospace; font-weight: normal;}
+.helpdesk-code  {}
+.helpdesk-code .head {}
+.helpdesk-code .foot {}
+.helpdesk-code .imp {font-weight: bold; color: red;}
+.helpdesk-code .ln-xtra {color: #cc0; background-color: #ffc;}
+.helpdesk-code li {font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;}
+.helpdesk-code li.li2 {font-weight: bold;}
+.helpdesk-code .kw1 {color: #b1b100;}
+.helpdesk-code .kw2 {color: #000000; font-weight: bold;}
+.helpdesk-code .kw3 {color: #000066;}
+.helpdesk-code .co1 {color: #808080; font-style: italic;}
+.helpdesk-code .co2 {color: #808080; font-style: italic;}
+.helpdesk-code .coMULTI {color: #808080; font-style: italic;}
+.helpdesk-code .es0 {color: #000099; font-weight: bold;}
+.helpdesk-code .br0 {color: #66cc66;}
+.helpdesk-code .st0 {color: #ff0000;}
+.helpdesk-code .nu0 {color: #cc66cc;}
+.helpdesk-code .me1 {color: #006600;}
+.helpdesk-code .me2 {color: #006600;}
+.helpdesk-code .sc0 {}
+.helpdesk-code .sc1 {}
+.helpdesk-code .sc2 {}
+.helpdesk-code .sc3 {}
+.helpdesk-code .re0 {color: #0000ff;}
+.helpdesk-code .re1 {color: #ff0000}

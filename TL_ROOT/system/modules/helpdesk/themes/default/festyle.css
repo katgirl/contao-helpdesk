@@ -1,0 +1,653 @@
+/**
+ * TYPOlight Helpdesk :: Frontend styles
+ *
+ * NOTE: this file was edited with tabs set to 4.
+ * @package Helpdesk
+ * @copyright Copyright (C) 2007, 2008 by Peter Koch, IBK Software AG
+ * @license See accompaning file LICENSE.txt
+ */
+
+.mod_helpdesk
+{
+	padding:5px;
+}
+
+/**
+ * General settings
+ */
+.mod_helpdesk p
+{
+	margin:3px 0;
+}
+
+.mod_helpdesk .middle,
+.mod_helpdesk .middle *
+{
+	vertical-align:middle;
+}
+
+.mod_helpdesk .centered
+{
+	text-align:center;
+}
+
+/**
+ * Heading area
+ */
+.mod_helpdesktitle .headertext,
+.mod_helpdesk .headertext
+{
+	margin:0 0 10px 0;
+}
+
+/**
+ * Breadcrumb navigation
+ */
+.mod_helpdesk  .breadcrumb
+{
+	background-color:#eee;
+	margin:0 0 10px 0;
+	padding:5px 10px;
+	font-size:120%;
+}
+
+/**
+ * Controls
+ */
+.mod_helpdesktitle .controls
+{
+	font-size:125%;
+	height:24px;
+	margin:0 5px;
+}
+
+.mod_helpdesktitle .controls *
+{
+	vertical-align:middle;
+}
+
+.mod_helpdesktitle .controls img
+{
+	margin:0 4px 0 0;
+}
+
+.mod_helpdesktitle .controls a
+{
+	margin:0 12px 0 0;
+}
+
+.mod_helpdesk .topfindcontrols
+{
+	margin:0 0 10px 0;
+	border-bottom:1px solid #ccc;
+} 
+
+.mod_helpdesk .bottomfindcontrols
+{
+	margin:0 0 10px 0;
+	border-top:1px solid #ccc;
+} 
+.mod_helpdesk .topcontrols
+{
+	margin:0 0 10px 0;
+} 
+
+.mod_helpdesk .bottomcontrols
+{
+	margin:5px 0 10px 0;
+} 
+
+.mod_helpdesk .controls .functions
+{
+	display:block;
+	height:18px;
+	line-height:18px;
+}
+
+.mod_helpdesk .controls .pagenav
+{
+	display:block;
+	height:18px;
+	line-height:18px;
+	float:right;
+}
+
+.mod_helpdesk .controls .matchinfo
+{
+	display:block;
+	font-size:120%;
+	font-weight:bold;
+	height:18px;
+	line-height:18px;
+}
+
+.mod_helpdesk .controls .functions img
+{
+	margin:0 4px 0 0;
+}
+
+.mod_helpdesk .controls .functions a
+{
+	margin:0 10px 0 0;
+}
+
+/**
+ * Page navigation
+ */
+.mod_helpdesk  .pagenavicon,
+.mod_helpdesk  .pagenavtext,
+.mod_helpdesk  .pagenavlink,
+.mod_helpdesk  .pagenavactive
+{
+	margin:0 5px 0 0;
+}
+
+.mod_helpdesk  .pagenavactive
+{
+	font-weight:bold;
+}
+
+/**
+ * Message container
+ */
+.mod_helpdesk .message-container
+{
+	margin:0 0 5px 0;
+	padding:0;
+	background-image:url("images/lightgrey140.png");
+	background-position:left top;
+	background-repeat:repeat-y;
+	border:1px solid #ccc;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+}
+
+.mod_helpdesk .message-container .clearfloat
+{
+	clear:both;
+}
+
+.mod_helpdesk .message-container .top-left
+{
+	float:left;
+	width:140px;
+	margin:5px 0;
+	text-align:center;
+	overflow:hidden;
+}
+
+.mod_helpdesk .message-container .top-right
+{
+	margin:0 0 0 140px;
+	padding:5px;
+}
+
+.mod_helpdesk .message-container .bottom-left
+{
+	float:left;
+	width:140px;
+	height:20px;
+	margin-top:1px;
+	text-align:center;
+	vertical-align:middle;
+} 
+
+.mod_helpdesk .message-container .bottom-left *,
+.mod_helpdesk .message-container .bottom-right .attachments *,
+.mod_helpdesk .message-container .bottom-right .buttons *
+{
+	vertical-align:middle;
+}
+
+.mod_helpdesk .message-container .bottom-right
+{
+	margin:0 0 0 140px;
+}
+ 
+.mod_helpdesk .message-container .bottom-right .attachments
+{
+	border-top:1px dotted #ccc;
+	margin:0 125px 0 0;
+	padding:0 5px;
+}
+
+
+.mod_helpdesk .message-container .bottom-right .attachment
+{
+	margin:0 10px 0 0;
+	white-space:nowrap;
+}
+
+.mod_helpdesk .message-container .bottom-right .buttons
+{
+	float:right;
+	border-top:1px dotted #ccc;
+	width:125px;
+	height:20px;
+	white-space:nowrap;
+	text-align:right;
+}
+
+.mod_helpdesk .message-container .avatar
+{
+	padding:5px 0 2px 0;
+}
+
+.mod_helpdesk .message-container .poster
+{
+	font-weight:bold;
+	margin:0 0 2px 0;
+}
+
+/**
+ * Mainlist
+ */
+.mod_helpdesk .mainlist
+{
+	border:1px solid #ccc;
+	border-collapse:collapse;
+}
+
+.mod_helpdesk .mainlist th
+{
+	white-space:nowrap;
+	background-color:#ddd;
+	font-size:110%;
+	font-weight:bold;
+	border:1px solid #ccc;
+	padding:3px 6px;
+	text-align:left;
+}
+
+.mod_helpdesk .mainlist td
+{
+	border:1px solid #ccc;
+	padding:2px 6px;
+}
+
+.mod_helpdesk .mainlist .headerrow
+{
+	background-color:#eee;
+	font-size:110%;
+}
+
+.mod_helpdesk .mainlist .headerrow td
+{
+	padding:3px 6px;
+}
+
+.mod_helpdesk .mainlist .iconcol *
+{
+	vertical-align:middle;
+}
+
+.mod_helpdesk .mainlist td.iconcol
+{
+	padding:3px;
+	white-space:nowrap;
+}
+
+.mod_helpdesk .mainlist .iconcol .icon
+{
+	display:block;
+	float:left;
+	padding:2px;
+	border:1px solid white;
+}
+
+.mod_helpdesk .mainlist .iconcol .text
+{
+	display:block;
+	margin:0 0 0 26px;
+	padding:3px 2px 3px 0;
+}
+
+.mod_helpdesk .mainlist .datarow
+{
+	font-size:90%;
+}
+
+.mod_helpdesk .mainlist .datarow-unread .iconcol .icon
+{
+	background-color:#ffe0e0;
+	border:1px solid #ffa0a0;
+}
+
+.mod_helpdesk .mainlist .datarow-unread .unreadbold
+{
+	font-weight:bold;
+}
+
+.mod_helpdesk .mainlist .datarow:hover
+{
+	background-color:#f6f6f8;
+}
+
+.mod_helpdesk .mainlist .maxwidth
+{
+	width:100%;
+}
+
+.mod_helpdesk .mainlist .nowrap
+{
+	white-space:nowrap;
+}
+
+.mod_helpdesk .mainlist .centered
+{
+	white-space:nowrap;
+	text-align:center;
+}
+
+.mod_helpdesk .mainlist .sublink
+{
+	font-weight:normal;
+}
+
+.mod_helpdesk .mainlist .icons
+{
+	white-space:nowrap;
+	text-align:right;
+}
+
+.mod_helpdesk .mainlist  .ticket
+{
+	white-space:nowrap;
+}
+
+.mod_helpdesk .mainlist .ticket img
+{
+	margin:0 5px 0 0;
+}
+
+.mod_helpdesk .mainlist .msginfo .tstamp
+{
+	font-weight:normal;
+}
+
+/**
+ * Bottom links
+ */
+.mod_helpdesk .bottomlinks
+{
+	margin:5px 0 10px 0;
+}
+
+/**
+ * Category (index) list
+ */
+.mod_helpdesk .category .title
+{
+	padding:0;
+	margin:0;
+}
+
+.mod_helpdesk .category .title a 
+{
+	font-size:120%;
+	font-weight:normal;
+}
+
+.mod_helpdesk .category .description
+{
+	padding:0;
+	margin:0;
+}
+
+.mod_helpdesk .category .description p
+{
+	color:#666;
+	font-size:90%;
+	font-weight:normal;
+}
+
+.mod_helpdesk .category .unread *,
+.mod_helpdesk .subject .unread
+{
+	/* font-weight:bold; */
+}
+
+/**
+ * Ticket list
+ */
+.mod_helpdesk td.subject a
+{
+	font-size:120%;
+}
+
+.mod_helpdesk .helpdesk-notickets
+{
+	font-size:120%;
+	margin:0 0 10px 0;
+} 
+
+/**
+ * Form
+ */
+.mod_helpdesk  div.formbody
+{
+	margin:0 0 10px 0;
+} 
+ 
+.mod_helpdesk  .formbody .label_container
+{
+	font-weight:bold;
+	padding:2px 0;
+}
+
+.mod_helpdesk  .formbody .hint
+{
+	color:#aaa;
+	padding:0 0 5px 0;
+	font-size:90%;
+}
+
+.mod_helpdesk  .formbody .subject
+{
+	width:99%;
+}
+
+.mod_helpdesk  .formbody .message_container
+{
+	margin:1px 0 0 0;
+	border:1px solid #ccc;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+}
+
+.mod_helpdesk  .formbody .message
+{
+	width:99%;
+	border:none;
+	border-color:white;
+	margin:2px;
+} 
+
+.mod_helpdesk .checkbox_container *,
+.mod_helpdesk .radio_container *
+{
+	vertical-align:middle;
+}
+
+.mod_helpdesk  .formbody .submit_container
+{
+	padding:0 0 5px 0;
+}
+
+.mod_helpdesk  .formbody .error_message
+{
+	float:right;
+	color:red;
+	margin:-2px 0 0 0;
+}
+
+.mod_helpdesk  .formbody .error_message img
+{
+	margin:0 5px 0 0;
+}
+
+.mod_helpdesk  .formbody .error_atch *
+{
+	color:red;
+	font-weight:bold;
+}
+
+.mod_helpdesk .formbody  fieldset { 
+	margin:10px 0;
+	padding:5px;
+	border:1px solid #ccc;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+} 
+
+.mod_helpdesk .formbody  fieldset legend { 
+	background-color:#eee;
+	color:#222;
+	padding:1px 3px;
+	border:1px solid #ccc;
+	font-size:90%;
+} 
+
+
+/**
+ * Edit message trailer
+ */
+.mod_helpdesk .messages-reverse
+{
+	font-size:120%;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 10px 0;
+}
+
+.mod_helpdesk .messages-reverse-list
+{
+	margin:0 0 10px 0;
+} 
+
+/**
+ * Search
+ */
+.mod_helpdesk #helpdesk_searchform
+{
+	margin:0 auto;
+	width:550px;
+}
+
+.mod_helpdesk .searchform .error_message
+{
+	float:none;
+	margin-top:5px;
+}
+
+.mod_helpdesk .searchform .hint
+{
+	margin-top:4px;
+}
+
+.mod_helpdesk .searchform .label_container
+{
+	margin-top:5px;
+	margin-bottom:2px;
+}
+
+.mod_helpdesk .searchform #helpdesk_searchterms
+{
+	width:400px;
+}
+
+.mod_helpdesk .searchform .checkbox_part
+{
+	display:inline;
+	margin-right:20px;
+}
+
+.mod_helpdesk .searchform .radio_part
+{
+	display:inline;
+	margin-right:20px;
+}
+
+.mod_helpdesk div.searchresult 
+{
+	margin-bottom:15px;
+}
+
+.mod_helpdesk .searchresult .subject
+{
+	font-size:120%;
+	margin-bottom:2px;
+}
+
+.mod_helpdesk .searchresult .info
+{
+	font-size:90%;
+	color:#888;
+	margin-bottom:3px;
+}
+
+.mod_helpdesk .searchresult .highlight
+{
+	font-weight:bold;
+}
+
+.mod_helpdesk .searchresult .searcherror
+{
+	font-weight:bold;
+	color:red;
+	margin-bottom:10px;
+}
+
+.mod_helpdesk .messagetext
+{
+	margin:10px 0;
+	font-size:125%;
+}
+
+.mod_helpdesk a.squarebutton 
+{
+	background: transparent url('images/square-gray-left.gif') no-repeat top left;
+	display: block;
+	float: left;
+	font: normal 12px Arial; /* Change 12px as desired */
+	line-height: 15px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 23px) */
+	height: 23px; /* Height of button background height */
+	padding-left: 9px; /* Width of left menu image */
+	text-decoration: none;
+	margin-right:6px;
+}
+
+.mod_helpdesk a:link.squarebutton, 
+.mod_helpdesk a:visited.squarebutton, 
+.mod_helpdesk a:active.squarebutton
+{
+	color: #222; /*button text color*/
+}
+
+.mod_helpdesk a.squarebutton span
+{
+	background: transparent url('images/square-gray-right.gif') no-repeat top right;
+	display: block;
+	padding: 4px 9px 4px 0; /*Set 9px below to match value of 'padding-left' value above*/
+}
+
+.mod_helpdesk a.squarebutton:hover
+{ /* Hover state CSS */
+	background-position: bottom left;
+}
+
+.mod_helpdesk a.squarebutton:hover span
+{ /* Hover state CSS */
+	background-position: bottom right;
+	color: black;
+}
+
+.mod_helpdesk .buttonwrapper
+{
+	overflow: hidden;
+	width: 100%;
+	margin:0 0 10px 0;
+}

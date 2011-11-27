@@ -1,0 +1,56 @@
+/**
+ * TYPOlight Helpdesk :: Backend styles
+ *
+ * NOTE: this file was edited with tabs set to 4.
+ * @package Helpdesk
+ * @copyright Copyright (C) 2007, 2008 by Peter Koch, IBK Software AG
+ * @license See accompaning file LICENSE.txt
+ */
+ 
+.helpdesk-global-button *
+{
+	vertical-align:middle;
+} 
+
+.helpdesk-categorylist .main
+{
+	padding:0 0 0 20px;
+}
+
+.helpdesk-categorylist .floatleft
+{
+	float:left;
+}
+
+div.helpdesk-settings-title
+{
+	font-weight:bold; 
+	font-size:130%;
+	padding:0 4px 10px 4px;
+	background-color:white !important;
+}
+
+table.helpdesk-settings
+{
+	width:660px;
+	background-color:white !important;
+}
+
+table.helpdesk-settings th
+{
+	height:22px;
+	width:100px;
+	white-space:nowrap;
+	background-color:#f6f6f6; 
+	font-weight:bold; 
+	border:1px solid #e9e9e9;
+	padding:4px;
+	text-align:left;
+}
+
+table.helpdesk-settings td
+{ 
+	height:22px;
+	border:1px solid #e9e9e9;
+	padding:4px;
+}

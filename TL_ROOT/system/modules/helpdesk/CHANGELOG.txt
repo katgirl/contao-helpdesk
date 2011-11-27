@@ -1,0 +1,443 @@
+============================
+TYPOlight Helpdesk CHANGELOG
+============================
+
+Version 1.3.0 (2010-02-16)
+--------------------------
+- Add a waiting time in the settings. New messages will only get marked as edited
+  after the waiting  time, giving the message poster some time to make corrections
+  without being marked as edited right from the start.
+  
+- For versions below 2.8.0 the pagination is done with the parameter 'pageno' to 
+  work around an issue in the TL search indexer. In 2.8.0 the issues was addressed, 
+  so the parameter ist named 'page' again in accordance to the TL standards.
+
+- Allthough helpdesk is declared to be compatible from 2.7.6 to 2.8.0, please note
+  that there is an issue with caching not reliably disabled in rc1 and rc2 of 2.8.0. 
+  So the rc's are not compatible, only 2.8.0 stable is.
+
+  
+Version 1.2.0 (2010-02-10)
+--------------------------
+- Added a switch to the settings to enable TYPOlight search. When this is enabled,
+  the forum/helpdesk messages will get included in the regular TYPOlight site search.
+  Rebuild the search index in the backends maintenance page after enabling or
+  disabling this option.
+  
+  In case you have a custom template for helpdesk_listmessages.tpl you need to adjust
+  it. Find the changes in the original template in the lines containing $objPage
+  and $hd->settings->tlsearch.
+
+  Note that enabling this option can significantly increase the TYPOlight search
+  index tables tl_search and tl_search_index, as well as the time taken to rebuild
+  the index in the backend maintenance. The amount depends on how many topics/tickets
+  are visible in all frontend helpdesk blocks.
+  
+- Regular forum/helpdesk search form reworked so advanced options are only shown 
+  on demand. Adjustments on customized templates helpdesk_search.tpl are required,
+  compare with the original template of the new version please.
+  
+- Fixed the long standing 'messed breadcrumb' issue.
+
+
+Version 1.1.0 (2010-02-06)
+--------------------------
+- Added category options to enable attatchments in notifications and email imports.
+
+- Reworked the forum comments module: 
+  Comments may now be attached to the page, the article, a news item(*), a FAQ item(*) or an event(*)
+  
+  (*) Taken from the news-/faq-/eventreader module within the same article as the 
+      helpdesk comments CE is in.
+
+- Fixed occasional issue with UTF-8 in notifications (credit to Benjamin aka b2m).
+
+
+Version 1.0.1 (2010-02-04)
+--------------------------
+- Fixed settings not shown in backend member/user settings of 2.7.6
+- Fixed that the automatically created OP in article comments did not update the statistics.
+- Fixed that the url-suffix in the settings was not recognized.
+- Fixed that breadcrumb was wrong when directly displaying a ticket coming from another page.
+- Fixed some german spellings.
+
+
+Version 1.0.0 (2009-06-20)
+--------------------------
+- Adjustments for 2.7.1
+
+
+Version 0.9.0 (2008-11-03)
+--------------------------
+- Improved breadcrumb:
+  Keeps path when viewing and editing posts in search results, unread lists etc.
+
+- Unread list changes:
+
+  - The results are cached in session (for more convenience and speed when
+    multiple pages of topics are found)
+
+  - The list is stricly ordered by latest post.
+
+  - "All read" within the unread list will only mark the topics read which are
+    in the cached result list, before it would mark all categories as read
+    which could make you miss a new message that was posted after fetching the
+    list.
+
+  - The category is now clickable to change directly to the thread list of the
+    category.
+
+- Display user contributions:
+
+  - New index function "mine" to display all topics/tickets the current user has
+    contributed to.
+
+  - The function can also be used to display contributions of any frontend or
+    backend user by using a customized link:
+
+    Example link for current user, all cats on page 'forum', page #2:
+    http://www.example.com/forum/mine/all.html?page=2
+
+    Example link for frontend member d.evanvs, categories 5 and 7:
+    http://www.example.com/forum/mine/5,7/member/d.evans.html
+
+    Example link for backend user k.jones, all cats on page 'helpdesk':
+    http://www.example.com/helpdesk/mine/all/user/k.jones.html
+
+- Display recent posts:
+
+  - Lists all topics/tickets with contributions in the last 24 hours.
+
+  - The recent time frame can be modified in the helpdesk settings.
+
+- Display unanswered tickets/topics:
+
+  - List all topics/tickets which have no replies yet.
+
+- Search improvements:
+
+  - Mode 'Like' replaces 'exact'. SQL wildcards must be applied by user himself
+    now.
+
+  - Mode 'Like binary' works as 'like' but forces a binary (case insensitive)
+    match.
+
+  - Limit for # of returned matches in search results can now be configured in
+    the helpdesk settings instead of editing HelpdeskConstants.php.
+
+- Member profile linking (usable only from TYPOlight 2.6.2 up)
+
+  - In the module "Forum/Helpdesk Block" there is a selection whom to display
+    member profile links (nobody, moderators/supporters, users/clients or
+	everybody). 
+	
+  - Another text input is for entering the page URL of the standard TYPOlight 
+    member list module (without the member id which gets appended 
+    automatically). The URL may be full qualified, or relative to the current 
+    site root:
+
+    Fully qualified:  http://www.example.com/memberlist.html
+    Relative to root: memberlist.html
+
+  - Only in posts created by frontend members the profile link will be 
+    displayed, because there is no equivalent to the memberlist module for 
+    backend users.
+
+	
+Version 0.8.3 (2008-09-15)
+--------------------------
+- Added alternate find mode so now we have:
+  - All relevant messages (as before)
+  - First match in relevant topics (new)
+
+- Made search/find parameters passed always in url so if can be saved or
+  bookmarked for reference.
+
+Version 0.8.2 (2008-09-13)
+--------------------------
+- Made bbcode url and img tags accept addresses without protocol as relative
+  url's of the current site.
+
+- Changed search to use 3 different modes:
+  - Full-text natural language [1]
+  - Full-text boolean [1]
+  - Exact match
+
+[1] http://dev.mysql.com/doc/refman/5.0/en/fulltext-search.html
+
+Version 0.8.1 (2008-09-01)
+--------------------------
+- Added grouping option to categories by a header text.
+- Added message page links to subject column in ticket list and unread list.
+- Re-added reply icon under every post.
+- Sort categories by display order in subscriptions.
+- Order unread list by category ascending, latest post timestamp descending.
+- Improved formatting of notification message in text mode.
+- Decode html entities in subject of notifications.
+- Moved creator/owner below subject in ticket list and unread list.
+- Fancier and more noticeable icon decoration for unread categories/tickets.
+- Fixed that insert tags in subjects and search results could mess the ouput.
+- Fixed sql error on invalid url input.
+- Fixed that original post did not get published when ticket was created
+  as unpublished first.
+- Fixed insert tags messed with span tags when editing existing messages.
+
+Version 0.8.0 (2008-08-22)
+--------------------------
+- Created a script to migrate from PunBB (available separately).
+- Added member/user roles, signatures and post counts.
+- Added time zone support for users/members:
+  When logged in all dates and times will display in the users local time.
+- Display location as "city, country" if enabled by member/user.
+- Display realname as "firstname lastname (username)" if enabled by member/user.
+- Smart date formating: Today and yesterday are displayed as text.
+- Extended paging controls: icons or text controls, brief or explicit.
+  (Change function calls pageNavigation() to variable pageNavigation in custom
+   templates)
+- Save edit information outside of the message. Choose level in the settings.
+- Speed optimizations for large forums.
+- Improved search procedure
+- Added synchronize function to settings (run it after upgrade!)
+- Added insert tags for statistics:
+  {‎{helpdesk::tot_tickets}}    Total # of tickets
+  {‎{helpdesk::tot_messages}}   Total # of messages
+  {‎{helpdesk::tot_members}}    Total # of members
+- Added view count to forum categories.
+- Added color tags to bbcode parser.
+- Added repeat delays to posting as flood prevention.
+- Added repeat delays to search to limit server load (DOS hampering).
+- Prevent TYPOlight insert tags from being processed within messages.
+- Fixed that categories did not automatically get marked as read after viewing
+  last unread ticket.
+- Fixed bbcode parser bug on invalid tag [text]
+- Fixed that after editing a message the order of the tickets followed
+  the edit timestamp, instead of the last post timestamp.
+- Fixed that deleting messages for normal members was broken.
+
+Version 0.7.0 (2008-07-29)
+--------------------------
+- Display breadcrumb also on bottom in the default theme.
+- Minor style tweaks in the default theme.
+- Fixed bug in RSS feeds where html entities could get truncated in long texts
+  resulting in invalid feeds.
+- Fixed bug where messages would still be listed under unread allthough the
+  category got marked as read.
+- Added setting for maximum message size in RSS feeds.
+- Changed buttons column from varchar(2000) to text in order to be compatible
+  with MySQL 4.1.
+- Moved helpdesk overall settings into a distinct backend module to unload
+  system settings.
+- Rearranged all 3 helpdesk backend menu items together.
+- Added commenting feature for articles with a content element.
+- All tags {‎{tag}} changed to [[tag]], please adjust your category settings.
+- Added "reply only" feature to categories.
+- Removed classic theme.
+- Make internal links by providing the message # instead of an URL.
+  Example: [url]123[/url]
+- Display an attachment as image by inserting the attachment # instead of an
+  URL. Example: [img]2[/img]
+- Added individual avatars for users and members by the new avatar extension.
+- Changed default template list_messages.tpl and helpdesk_editmessage to show
+  the message header info at the left side instead of above every message.
+- Editor buttons can now be customized for each category.
+- Added a copy button to the helpdesk structure to enable easy duplication
+  (cloning) of an existing category.
+- Users and members can now also subscribe to public categories where they are
+  not authorized for write access.
+- Moved GeSHi into a separately installable extensions to allow other extensions
+  to use it, instead of every extension holding a private copy.
+- Fixed that categories were not showing up in the frontend personal data module
+  on a certain server configuration.
+- Changed license from GPL2 to GPL3.
+
+Version 0.6.5 (2008-04-22)
+--------------------------
+- Added a logging feature to enable tracking down issues with the
+  notification and email import functions. The logging can be controlled in the
+  TYPOlight settings and will be written to /system/logs/HelpdeskNotify.log
+  and /system/logs/HelpdeskImport.log (make sure to have write permissions).
+- Added script HelpdeskNotifyExec.php to run the notification script without
+  cron component.
+- Added script HelpdeskImportExec.php to run the email import script without
+  cron component.
+- Fixed notification to frontend members not working in certain cases.
+- Fixed notifications to ticket/topic creator not working in certain cases.
+- Fixed sql error message when marking a category as read and no message has yet
+  been added to any category.
+- Fixed ambiguous column "published" in a query in case the member table
+  got extended with a custom column "published".
+
+Version 0.6.4 (2007-12-20)
+--------------------------
+- Hide bbcode editor buttons when javascript is disabled.
+- Fixed compatibility issue with php.ini setting of
+  allow_call_time_pass_reference = Off
+- Fixed compatibility issues with eAccelerator.
+- Removed mod_personalData styles from festyle.css. This belonged not here, it
+  should be in the sites basic stylesheet.
+
+Version 0.6.3 (2007-11-25)
+--------------------------
+- Allow pasting of messages into a category. This will create a new topic/ticket
+  with the first message in the clipboard becoming the original post of the new
+  topic/ticket.
+- Allow pasting of topics/tickets into another ticket. This will merge all
+  messages of the pasted tickets/topics into the target topic/ticket.
+- Fixed missing closing span tag in categogy list template.
+- Fixed RSS feeds not being compliant with W3C validator.
+- Rearranged cut/paste icons and function to be leftmost.
+
+Version 0.6.2 (2007-11-25)
+--------------------------
+- Extendend cut/paste so that multiple topics/tickets or messages can be added
+  to the clipboard by sequential clicking the cut icons, and then  pasted to the
+  destination category or topic/ticket in one go.
+
+Version 0.6.1 (2007-11-24)
+--------------------------
+- Added cut/paste to move a topic/ticket to another category by moderators.
+- Added cut/paste to move a message to another topic/ticket by moderators.
+- Fixed that saving a message after editing did not work for clients/users
+  which were not the creator (OP) of the topic. It worked only for the OP and
+  for moderators/supporters/admins.
+- Fixed that category was marked as changed even if the new messages were all
+  from the user himself.
+- Fixed javascript error in message list when using internet explorer 6.
+- Cleaned up license terms and copyright notices.
+- Lightened up default icons to be more cmpliant with the TYPOlight default
+  theme; moved previous icons to the 'classic' theme.
+
+Version 0.6.0 (2007-11-14)
+--------------------------
+- Renamed the original frontend module to 'Forum/Helpdesk Block' and added an
+  option to hide the block-wide functions on the index page.
+- Added a new frontend module of type 'Forum/Helpdesk Title' to display a page
+  title along with optional text and page-wide functions. Text and page wide
+  functions are only shown on the index page.
+- Added function to display unread topics/threads on index page (block and
+  page wide).
+- Moved some category settings to typolight general settings:
+  - Number of topics/tickets per page
+  - Number of messages per page
+  - Frontend images directory.
+- Added global setting for number of search results per page.
+- Made 'unread' options available to all logged-in users and members, even if
+  they only have read permission to the category.
+- Removed title where the breadcrumb navigation is shown.
+- CSS/template change to display all links in the normal attributes.
+- CSS/template change to enable using links in the category description.
+
+Version 0.5.2 (2007-11-05)
+--------------------------
+- Let RSS feeds auto-login when Recall module is installed
+
+Version 0.5.1 (2007-11-04)
+--------------------------
+- Added RSS feeds
+- Fixed protected access issue in certain constellations
+
+Version 0.5.0 (2007-11-02)
+--------------------------
+- Added search function
+- Show index after marking a category as read
+- Change all source files to unix format to avoid conversion issues
+- Fixed img alt texts in icons of category layout manager
+- Fixed sql error in migration script when updating from early releases
+- Fixed preview- and bbhelp-popups showing backend login form in frontend
+
+
+Version 0.4.2 (2007-10-27)
+--------------------------
+- Use selects instead of radio buttons in category settings
+- Use file tree to edit attachment directory
+- Fix html special chars not being replaced in plain code boxes
+
+Version 0.4.1 (2007-10-13)
+--------------------------
+- Added a success log message to notification batch.
+- Fixed that admin could not see unpublished categories.
+- Fixed that moderators/supporters did not have full access to unpublished
+  tickets and messages.
+- Fixed that when creating a new category, it was necessary to click on the
+  checkboxes for "Enable attachments", "Enable notifications" and "Enable
+  email import" once to have the respective state initialized properly.
+
+Version 0.4.0 (2007-10-09)
+--------------------------
+- Some controller refactoring (edit form).
+- Fixed bbcode insert issue on opera.
+- Email notifications are sent by a scheduler job now.
+- Email notifications as html use the backend theme styles now.
+- Images in email notifications are working now.
+- Added pop3/imap email import to create new tickets/topics, as well as to reply.
+  (Html in the email gets converted to bbcode to a certain extent.)
+- Backend users can now be both, clients/members or supporters/moderators.
+- Frontend members can now be both, clients/members or supporters/moderators.
+- Added page navigation for both, ticket list and message list.
+- Changed main navigation to breadcrumb style.
+- Added a visible message number for reference and made it a link to the message.
+- Removed topic title and number from leading icon column of forums.
+- Using the term topic in place of thread.
+- Added attachments.
+- Added manual category sorting.
+- Added read/unread status.
+
+
+Version 0.3.2 (2007-09-25)
+--------------------------
+- Fixed some small css issues (ie6).
+- Added pinned (sticky) treads.
+- Added avatar for female members.
+- Added option to quote from multiple previous messages on reply.
+- Fixed supporter not being saved to ticket at backend reply.
+- Some speed optimize in bbcode parser.
+
+
+Version 0.3.1 (2007-09-22)
+--------------------------
+- Fixed username missing in edit note when a supporter edits a message.
+- Added text to be displayed below module title, with checkbox to display it
+  either everywhere or only on the index page.
+- Added a checkbox to the module to hide itself when no categories are found.
+- Fixed wrong module title display sometimes when multiple helpdesk modules
+  are on the same frontend page.
+- Fixed transparent PNG issue with IE5.5/IE6 (frontend only).
+- Fixed issue with umlauts in preview window.
+
+
+Version 0.3.0 (2007-09-21)
+--------------------------
+- Added two new category types for normal forums.
+- Reworked backend and devided it into two parts; one for category
+  maintenance (create/delete/change) under the "Layout" modules,
+  and one for supporters work under "Content" modules.
+- Added email notification capability.
+
+
+Version 0.2.1 (2007-09-16)
+--------------------------
+- Fixed broken backend security checks in 0.2.0 distribution
+
+
+Version 0.2.0 (2007-09-16)
+--------------------------
+- Made backend recognize theme setting:
+  - css and icons are now at system/modules/helpdesk/themes.
+    IMPORTANT: adjust your frontend template accordingly.
+  - Fallback on icons to gif when no png found.
+  - Fallback on files to default theme when not found in custom theme.
+- Added deep authorization checks to backend module.
+- Fixed error messages when no client or supporter groups defined.
+- Added category parameter for images directory, to enable custom icons.
+  Fallback: Images no found there will be taken from the default images
+  directory.
+- GeSHi: fixed line numbering issue and switched to css mode
+- Wide code and pre blocks are now displayed in a scrollbox to no longer mess up
+  the layout.
+- Several appearence tweaks (templates, icons, styles).
+- Replaced the smiley set.
+
+
+Version 0.1.0 (2007-09-14)
+--------------------------
+- First public preview release for early adopters and testers.

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE contaopackage>
+<extension name="helpdesk" date="20111007">
+    <author user="acenes" name="Peter Koch" website="http://ibk-software.com" />
+    <copyright>(c) 2007-2010 Peter Koch</copyright>
+    <license>GNU GPL V2</license>
+    <classification type="free" category="application" />
+    <release version="10030009" build="32" date="20100216" />
+    <contao minversion="20070069" maxversion="20090009" />
+    <requiredextension name="avatar" minversion="10000009" maxversion="10000019" />
+    <requiredextension name="cron" minversion="10000009" maxversion="10010009" />
+    <requiredextension name="geshi" minversion="10000089" maxversion="10000089" />
+    <language code="de">
+        <translator user="acenes" name="Peter Koch" website="http://ibk-software.com" />
+        <searchtags>Forum,Helpdesk,Support,Ticket,Kommentare</searchtags>
+        <title>Helpdesk</title>
+        <teaser>Allgemeine Forum und Helpdesk Anwendung mit Ticketverwaltung</teaser>
+        <description>&lt;ul&gt; &lt;li&gt;Echte TYPOlight Anwendung; voll integriert in Anwender/Mitglieder System.&lt;/li&gt; &lt;li&gt;Kann als allgemeines Forum, als Helpdesk Ticket System, oder beides zugleich eingesetzt werden.&lt;/li&gt; &lt;li&gt;Erweiterte Kommentarfunktion für Artikel mittels eines Inhaltselements.&lt;/li&gt; &lt;li&gt;Sowohl Frontend Mitglieder als auch Backend Anwender können teilnehmen.&lt;/li&gt; &lt;li&gt;Mehrere Frontend Module mit ausgewählten Kategorien möglich; angezeigt auf einer oder mehrern Seiten, oder auch eingebettet in Artikeln.&lt;/li&gt; &lt;li&gt;Backend Module zur Konfiguration und Ausführung.&lt;/li&gt; &lt;li&gt;Umfassende BBCode Unterstützung einschliesslich Tabellen, Listen, Boxen, Syntax Highlight und mehr.&lt;/li&gt; &lt;li&gt;Popup Fenster für BBCode Hilfe und Beitrags-Vorschau.&lt;/li&gt; &lt;li&gt;Email Benachrichtigung an eingeschriebene Benützer.&lt;/li&gt; &lt;li&gt;Email Import von neuen Themen und Tickets, sowie Beiträgen als Antwort.&lt;/li&gt; &lt;li&gt;Voll anpassbares Layout und Erscheinung mittels Templates und Themen.&lt;/li&gt; &lt;li&gt;Leistungsfähige Suchmaschine.&lt;/li&gt; &lt;li&gt;RSS Feeds für beliebige Kombinationen von Kategorien.&lt;/li&gt; &lt;li&gt;Handliche Moderator Funktionen einschliesslich Cut/Paste Operationen für Beiträge, Themen und Tickets.&lt;/li&gt; &lt;/ul&gt;</description>
+        <releasenotes>&lt;h3&gt;Version 1.3.0&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;In der Einstellungen wurde eine Karenzzeit für die Bearbeitung hinzugefügt. Neue Beiträge können während dieser Zeit noch nachbearbeitet werden ohne dass sie gleich von Beginn an als bearbeitet ausgewiesen werden.&lt;/li&gt;
+&lt;li&gt;Für TYPOlight Versionen vor 2.8.0 wird der Paginierparameter &#039;pageno&#039; verwendet um ein Problem in der Suchindizierung zu umgehen. In 2.8.0 wurde das Problem behoben, und so verwendet Helpdesk ab dieser Version wieder den Parameter &#039;page&#039; gemäss den TYPOlight Standards.&lt;/li&gt;
+&lt;li&gt;Obwohl Helpdesk als kompatibel von 2.7.6 bis 2.8.0 ausgewiesen ist, gilt das nicht für die rc1 und rc2 Version von 2.8.0 sondern nur für die stabile Freigabe. (Bei rc1 und rc2 funktioniert das Ausschalten des Browser-Caches nicht durchgängig was bei interaktiven Frontend-Anwendungen zu Problemen führt.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Siehe Datei CHANGELOG.txt für komplette Liste der früheren Änderungen.&lt;/p&gt; 
+&lt;p&gt;Nach Update die Synchronisierung in den Einstellungen ausführen.&lt;/p&gt;</releasenotes>
+        <manual link="http://contifex.com/wiki/extensions/helpdesk" />
+        <forum link="http://www.typolight-community.de/forumdisplay.php?f=20" />
+    </language>
+    <language code="fr">
+        <translator user="cyril" name="Cyril Ponce" website="http://www.contao.fr" />
+        <searchtags>Forum,Assistance,Support,Ticket</searchtags>
+        <title>Forum / Assistance</title>
+        <manual link="http://contifex.com/wiki/extensions/helpdesk" />
+        <forum link="http://www.typolight-community.org/viewforum.php?f=21" />
+    </language>
+    <language code="en">
+        <translator user="acenes" name="Peter Koch" website="http://ibk-software.com" />
+        <searchtags>Forum,Helpdesk,Support,Ticket,Comments</searchtags>
+        <title>Helpdesk</title>
+        <teaser>General forum and help desk ticketing application</teaser>
+        <description>&lt;p&gt;A message board (forum) application designed to be as well used as a helpdesk ticketing system, for example to provide formal and informal support to customers or clients. The terminology and functions of the forum categories is slightly different than the support ticketing categories, but when you know the mapping you will immediately be familiar with the application.&lt;/p&gt;
+
+&lt;h4&gt;Features&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Native TYPOlight application; fully integrated into TYPOlight user/member system.&lt;/li&gt;
+&lt;li&gt;Can be used as forum, as helpdesk ticketing system, or both at same time.&lt;/li&gt;
+&lt;li&gt;Add enhanced commenting feature to your articles with a content element.&lt;/li&gt;
+&lt;li&gt;Both, frontend members and backend users, can be members/clients or moderators/supporters.&lt;/li&gt;
+&lt;li&gt;Multiple frontend modules with selected categories are possible; to be displayed on one or several pages, or embedded within articles.&lt;/li&gt;
+&lt;li&gt;Backend modules for configuration and forum participation.&lt;/li&gt;
+&lt;li&gt;Comprehensive and fast BBCode engine including tables, lists, several box types, syntax highlighting and more.&lt;/li&gt;
+&lt;li&gt;Popup windows for BBCode help and editor preview.&lt;/li&gt;
+&lt;li&gt;Email notification to subscribing users.&lt;/li&gt;
+&lt;li&gt;Email import to create new topics/tickets, as well as to reply to notifications.&lt;/li&gt;
+&lt;li&gt;Fully customizable layout and appearence by templates and themes.&lt;/li&gt;
+&lt;li&gt;Powerful search engine.&lt;/li&gt;
+&lt;li&gt;RSS feeds for any selection of categories.&lt;/li&gt;
+&lt;li&gt;Convenient moderator functions including cut/paste operations to move messages and topics&lt;/li&gt;
+&lt;/ul&gt;</description>
+        <releasenotes>&lt;h3&gt;Version 1.3.0&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a waiting time in the settings. New messages will only get marked as edited after the waiting  time, giving the message poster some time to make corrections without being marked as edited right from the start.&lt;/li&gt;
+&lt;li&gt;For versions below 2.8.0 the pagination is done with the parameter &#039;pageno&#039; to 
+  work around an issue in the TL search indexer. In 2.8.0 the issues was addressed, 
+  so the parameter ist named &#039;page&#039; again in accordance to the TL standards.&lt;/li&gt;
+&lt;li&gt;Allthough helpdesk is declared to be compatible from 2.7.6 to 2.8.0, please note
+  that there is an issue with caching not reliably disabled in rc1 and rc2 of 2.8.0. 
+  So the rc&#039;s are not compatible, only 2.8.0 stable is.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Check file CHANGELOG.txt for the full history of changes.&lt;/p&gt;
+&lt;p&gt;Execute synchronisation in the settings after upgrade.&lt;/p&gt;</releasenotes>
+        <manual link="http://contifex.com/wiki/extensions/helpdesk" />
+        <forum link="http://www.typolight-community.org/viewforum.php?f=21" />
+    </language>
+    <language code="ro">
+        <translator user="purcaruionut" name="Ionuţ PURCARU" website="http://www.iroot.ro" />
+        <searchtags>Forum,Asistenţă,Suport,Tichet</searchtags>
+        <title>Forum/Asistenţă</title>
+        <teaser>Aplicaţie de forum şi asistenţă</teaser>
+        <description>&lt;p&gt;O aplicaţie de mesagerie forum) proiectată pentru a fi la fel de bine folosită ca un sistem de asistenţă, de exemplu, pentru a oferi sprijin formal şi informal clienţilor. Terminologia şi funcţiile din categoriile forum este puţin diferită de cea de la categoriile de asistenţă, dar după o cunoaştere mai amănunţită veţi fi imediat familiarizat cu  cererea.&lt;/p&gt; &lt;h4&gt; Facilităţi &lt;/h4&gt; &lt;ul&gt; &lt;li&gt;Aplicaţie nativă Contao; integrată complet în sistemul de utilizatori/membri. &lt;/li&gt; &lt;li&gt;Poate fi folosit ca un forum, ca sistem de asistemţă de tichetare, sau ambele în acelaşi timp. &lt;/li&gt; &lt;li&gt; Poate adăuga comentarea avansată pentruarticole cu un element de conţinut. &lt;/li&gt; &lt;li&gt;Ambii, membrii frontend şi utilizatorii backend, pot fi membri sau clienţi, moderatori sau asistenţi. &lt;/li&gt; &lt;li&gt;Este posibilă folosirea modulelor de interfaţă cu multiple categorii selectate; să fie afişate pe una sau mai multe pagini, sau încorporat în articole. &lt;/li&gt; &lt;li&gt; Module backend pentru configurare şi participarea la forum. &lt;/li&gt; &lt;li&gt; Motor BBCode complet şi rapid, inclusiv codul BB, tabele, liste, mai multe tipuri de cadre, evidenţiere sintaxă şi mai multe. &lt;/li&gt; &lt;li&gt; Ferestre pop-up pentru ajutor şi previzualizare pentru editor. &lt;/li&gt; &lt;li&gt;Notificare prin email pentru utilizatori înscrişi. &lt;/li&gt; &lt;li&gt;Import de email pentru a crea subiecte noi sau tichete, precum şi pentru a răspunde la notificări. &lt;/li&gt; &lt;li&gt; Aspect complet personalizabil prin template-uri şi teme &lt;/li&gt; &lt;li&gt; Motoar de căutare puternic. &lt;/li&gt; &lt;li&gt; RSS pentru orice selecţie de categorii. &lt;/li&gt; &lt;li&gt; Funcţii convenabile de moderator, inclusiv operaţiuni de tăiere alipire pentru a muta mesajele. &lt;/li&gt; &lt;/ul&gt;</description>
+        <releasenotes>&lt;h3&gt; Versiunea 1.3.0 &lt;/h3&gt; &lt;ul&gt; &lt;li&gt; Adaugă un timp de aşteptare în setări. Mesajele noi vor primi marcare ca fiind reeditate doar după ce timpul de aşteptare a expirat, dând posibilitatea celui care a postat mesajul să facă eventuale corecţii, fără a fi marcate ca reeditare de la început. &lt;/li&gt; &lt;li&gt; Pentru versiunile 2.8.0 sau mai vechi paginarea se face cu parametrul &#039;pageno&#039; pentru a rezolva o problemă de indexare în TL. În 2.8.0 problema a fost rezolvată, astfel încât parametrul a fost redenumit &#039;page&#039; din nou în conformitate cu standardele TL. &lt;/li&gt; &lt;li&gt; Deşi extensia este declarată a fi compatibilă cu versiuni de la 2.7.6 la 2.8.0, vă rugăm să reţineţi că există o problemă cu cache-ul în RC1 şi RC2 de la 2.8.0. Deci, RC-urile nu sunt compatibile, numai versiunile 2.8.0 stabile sunt &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; Verificaţi fişierul CHANGELOG.txt pentru istoria completă de schimbări. &lt;/p&gt;Execută sincronizare în setări după upgrade. &lt;/p&gt;</releasenotes>
+        <manual link="http://contifex.com/wiki/extensions/helpdesk" />
+        <forum link="http://www.contao-community.org/viewforum.php?f=21" />
+    </language>
+    <language code="cs">
+        <translator user="frogzone" name="Tomas Petrlik" website="http://www.frogzone.cz" />
+        <searchtags>Forum,Helpdesk,Support,Ticket,Comments</searchtags>
+        <title>Helpdesk</title>
+        <teaser>Všeobecné fórum a helpdesk</teaser>
+        <description>&lt;p&gt;A message board (forum) application designed to be as well used as a helpdesk ticketing system, for example to provide formal and informal support to customers or clients. The terminology and functions of the forum categories is slightly different than the support ticketing categories, but when you know the mapping you will immediately be familiar with the application.&lt;/p&gt; &lt;h4&gt;Features&lt;/h4&gt; &lt;ul&gt; &lt;li&gt;Native TYPOlight application; fully integrated into TYPOlight user/member system.&lt;/li&gt; &lt;li&gt;Can be used as forum, as helpdesk ticketing system, or both at same time.&lt;/li&gt; &lt;li&gt;Add enhanced commenting feature to your articles with a content element.&lt;/li&gt; &lt;li&gt;Both, frontend members and backend users, can be members/clients or moderators/supporters.&lt;/li&gt; &lt;li&gt;Multiple frontend modules with selected categories are possible; to be displayed on one or several pages, or embedded within articles.&lt;/li&gt; &lt;li&gt;Backend modules for configuration and forum participation.&lt;/li&gt; &lt;li&gt;Comprehensive and fast BBCode engine including tables, lists, several box types, syntax highlighting and more.&lt;/li&gt; &lt;li&gt;Popup windows for BBCode help and editor preview.&lt;/li&gt; &lt;li&gt;Email notification to subscribing users.&lt;/li&gt; &lt;li&gt;Email import to create new topics/tickets, as well as to reply to notifications.&lt;/li&gt; &lt;li&gt;Fully customizable layout and appearence by templates and themes.&lt;/li&gt; &lt;li&gt;Powerful search engine.&lt;/li&gt; &lt;li&gt;RSS feeds for any selection of categories.&lt;/li&gt; &lt;li&gt;Convenient moderator functions including cut/paste operations to move messages and topics&lt;/li&gt; &lt;/ul&gt;</description>
+        <releasenotes>&lt;h3&gt;Version 1.3.0&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Add a waiting time in the settings. New messages will only get marked as edited after the waiting time, giving the message poster some time to make corrections without being marked as edited right from the start.&lt;/li&gt; &lt;li&gt;For versions below 2.8.0 the pagination is done with the parameter &#039;pageno&#039; to work around an issue in the TL search indexer. In 2.8.0 the issues was addressed, so the parameter ist named &#039;page&#039; again in accordance to the TL standards.&lt;/li&gt; &lt;li&gt;Allthough helpdesk is declared to be compatible from 2.7.6 to 2.8.0, please note that there is an issue with caching not reliably disabled in rc1 and rc2 of 2.8.0. So the rc&#039;s are not compatible, only 2.8.0 stable is.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Check file CHANGELOG.txt for the full history of changes.&lt;/p&gt; &lt;p&gt;Execute synchronisation in the settings after upgrade.&lt;/p&gt;</releasenotes>
+        <manual link="http://contifex.com/wiki/extensions/helpdesk" />
+        <forum link="http://www.typolight-community.org/viewforum.php?f=21" />
+    </language>
+    <language code="lv">
+        <translator user="warrior" name="Maris Celmins" website="http://www.bauskasbiblioteka.lv" />
+        <searchtags>Forum,Helpdesk,Support,Ticket,Comments</searchtags>
+        <title>Helpdesk</title>
+        <teaser>Vispārīgs foruma un palīdzības dienesta pieteikumu reģistrs</teaser>
+        <description>&lt;p&gt;Pieteikumu, jeb Ziņojumu dēlis (forums), ko var labi izmantot kā palīdzības dienesta biļešu sistēmu, piemēram, nodrošināt klientu formālu un neformālu atbalstu. Foruma kategorijās izmantotā terminoloģija un funkcijas ir nedaudz savādāka nekā atbalsta biļešu kategorijām, bet, tiklīdz izprotat atbalsta biļešu kategoriju savstarpējo sasaisti, jūs nekavējoties saprotat kā darbojas aplikācija. &lt;/p&gt;&lt;h4&gt;Jaunas iespējas&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Dabisks (native) Contao pieteikums;.. pilnībā integrēts Contao lietotāju/dalībnieku sistēmā&lt;/li&gt;&lt;li&gt;izmanjams gan kā forums, gan kā - palīdzības dienesta biļešu sistēma, vai abas vienalicīgi&lt;/li&gt;&lt;li&gt;Pievienota uzlabota komentēšanas iespēja Rakstiem ar komentāru satura elementu&lt;/li&gt;&lt;li&gt;Gan Frontend dalībnieki, gan
+Backend lietotāji var būt dalībnieki/klienti, vai moderatori/atbalstītāji&lt;/li&gt;&lt;li&gt;Iespējami vairāki Frontend moduļi ar izvēlētām kategorijām; lai tiktu parādīts uz vienu vai vairākām lapām, vai iegults raksti.  &lt;li&gt; aizmugure moduļu konfigurāciju un foruma līdzdalību . &lt;li&gt; Visaptveroša un ātri BBCode dzinēju, ieskaitot tabulas, sarakstus, vairāki kaste veidu, sintakse izceļot un vairāk . &lt;li&gt; Popup logiem BBCode palīdzību un redaktors preview.  &lt;li&gt; e-pasta paziņojumu pierakstieties lietotājiem.  &lt;li&gt; Nosūtīt importa, lai radītu jaunas tēmas / biļetes, kā arī atbildēt uz paziņojumiem, . &lt;li&gt; Pilnībā customizable izkārtojumu un izskatu, veidnes un tēmām.  &lt;li&gt; jaudīgu meklēšanas dzinēju.  &lt;li&gt; RSS barotnes, lai jebkura atlases kategorijām.  &lt;li&gt; Ērta moderatora funkcijas, tostarp cut / paste darbības, lai pārvietotu ziņojumus un tēmas</description>
+        <releasenotes>&lt;h3&gt;Version 1.3.0&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Pievienoti gaidīšanas laiku uzstādījumi. Jaunie ziņojumi tiks atzīmēti tikai kā rediģēti pēc gaidīšanas laika, sniedzot paziņojuma iesniedzējam kādu laiku, lai veiktu labojumus bez atzīmes par rediģēšanu jau no paša sākuma.&lt;/li&gt;&lt;li&gt;Versijām, zem 2.8.0 lapošana tiek veikta ar parametru &#039;pageno &quot;, lai apietu jautājumu TL meklēšanas rādītājā. 2.8.0 versijā jautājumi bija adresēti, tāpēc parametrs atkal ir ar nosaukumu &quot;page&quot; saskaņā ar TL standartiem.&lt;/li&gt;&lt;li&gt;Lai gan Helpdesk ir atzīts par saderīgu no 2.7.6 līdz 2.8.0, lūdzu, ņemiet vērā, ka problēma ar caching nav ticami novērsta RC1 un 2.8.0 RC2. Tātad RC&#039;s nav savienojami, stabil savietojamība ir tikai 2.8.0 versiju.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Pārbaudiet CHANGELOG.txt faila pilno izmaiņu vēsturi.&lt;/p&gt;&lt;p&gt;Pēc jaunināšanas izpildiet iestatījumos sinhronizāciju.&lt;/p&gt;</releasenotes>
+        <manual link="http://contifex.com/wiki/extensions/helpdesk" />
+        <forum link="http://www.contao-community.org/viewforum.php?f=21" />
+    </language>
+</extension>

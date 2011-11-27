@@ -1,0 +1,40 @@
+/**
+ * TYPOlight Helpdesk :: BBCode editor styles
+ *
+ * NOTE: this file was edited with tabs set to 4.
+ * @package Helpdesk
+ * @copyright Copyright (C) 2007, 2008 by Peter Koch, IBK Software AG
+ * @license See accompaning file LICENSE.txt
+ */
+
+.functionbar *
+{
+	vertical-align:middle;
+	margin:0;
+	padding:0;
+}
+
+.functionbar
+{
+	height:30px;
+	border-bottom:1px solid #ccc;
+	background-color:#f8f8f8;
+	padding:1px 5px;
+	margin:0;
+	clear:both;
+}
+
+.functionbar .buttongroup
+{
+	display:block;
+	float:left;
+	height:20px;
+	margin:0 10px 0 0;
+} 
+
+.buttongroup .imgbutton
+{
+	display:block;
+	float:left;
+	margin:4px 4px 0 0;
+} 
