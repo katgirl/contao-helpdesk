@@ -1,0 +1,152 @@
+<?php
+/**
+ * Contao Helpdesk :: List tickets template
+ *
+ * NOTE: this file was edited with tabs set to 4.
+ * @package Helpdesk
+ * @copyright Copyright (C) 2007-2010 by Peter Koch, IBK Software AG
+ * @license See accompaning file LICENSE.txt
+ */
+?>
+<!-- 
+
+	Contao Forum/Helpdesk :: Copyright (C) 2007-2010 by Peter Koch, IBK Software AG
+	Visit http://www.Contao.org/extension-list/view/helpdesk.html for details.
+	
+-->
+<!-- indexer::stop -->
+
+<?php 
+global $objPage; 
+$hd = &$this->helpdesk; 
+$cat = &$hd->category; 
+$text = &$hd->text; 
+if (is_object($objPage)) $objPage->pageTitle = $cat->title; 
+$mainFuncs = '';
+if ($cat->pasteLink) { // clipboard not empty
+	$mainFuncs .= $hd->createImage('paste16') . '<a href="' . $cat->pasteLink . '">' . $text['paste'] . "</a>\n";
+	$mainFuncs .= $hd->createImage('nopaste16') . '<a href="' . $hd->nopasteLink . '">'. $text['nopaste'] . "</a>\n";
+} else { //clipboard empty
+if ($cat->feedLink)
+	$mainFuncs .= $hd->createImage('feed14') . '<a href="' . $cat->feedLink . '">' . $text['feed'] . "</a>\n";
+if ($cat->searchLink)
+	$mainFuncs .= $hd->createImage('find16') . '<a href="' . $cat->searchLink . '">' . $text['search'] . "</a>\n";
+if ($cat->createTicketLink)
+	$mainFuncs .= $hd->createImage('add16') . '<a href="' . $cat->createTicketLink . '">' . $text['newticket'] . "</a>\n";
+if ($cat->markReadLink)
+	$mainFuncs .= $hd->createImage('checked16') . '<a href="' . $cat->markReadLink . '">' . $text['markcatread'] . "</a>\n";
+} // clipboard empty 	
+?>
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style) { ?> style="<?php echo $this->style; ?>"<?php } ?>>
+
+<div class="breadcrumb"><?php echo $hd->breadcrumb; ?></div>
+
+<div class="topcontrols controls middle">
+<?php echo $hd->pageNavigation; ?>
+<span class="functions">
+<?php echo $mainFuncs; ?>
+</span>
+</div>
+
+<?php echo $controls; ?>
+<?php if (count($hd->tickets)) { ?>
+<table class="mainlist">
+
+<tr>
+<th class="ticketid"><?php if ($cat->isSupport) echo $text['ticket']; ?></th>
+<th class="subject maxwidth"><?php echo $text['subject']; ?></th>
+<?php if ($cat->isSupport) { ?>
+<th class="supporter"><?php echo $text['supporter']; ?></th>
+<?php } ?>
+<th class="replycount centered"><?php echo $text['replies']; ?></th>
+<?php if (!$cat->isSupport) { ?>
+<th class="viewcount centered"><?php echo $text['views']; ?></th>
+<?php } ?>
+<th class="latestpost"><?php echo $text['latestpost']; ?></th>
+<?php if ($cat->isSupport || $hd->role>=HELPDESK_SUPPORTER) { ?>
+<th class="icons">&nbsp;</th>
+<?php } ?>
+</tr>
+
+<?php foreach ($hd->tickets as $tck) { ?>
+<tr class="datarow<?php if (!$tck->read) echo ' datarow-unread'; ?>">
+<td class="iconcol">
+<span class="icon"><?php echo $hd->createImage('ticket'.$tck->index.'16'); ?></span>
+<?php if ($cat->isSupport) echo '<span class="text">'.$tck->id.'</span>'; ?>
+</td>
+<td class="subject">
+<a href="<?php echo $tck->listMessagesLink; ?>" class="unreadbold"><?php echo $tck->subject; ?></a>
+<br />
+<?php echo sprintf($hd->text['postedby'], $cat->isForum && !strlen($tck->client) ? $tck->supporter : $tck->client); ?>
+<?php 
+if (count($tck->pageLinks)>0) {
+	echo ' [ ';
+	foreach ($tck->pageLinks as $p => $l)
+		echo '<a href="' . $l . '">' .$p . '</a> ';
+	echo ']';
+} // if
+?>
+</td>
+<?php if ($cat->isSupport) { ?>
+<td class="supporter"><?php echo $tck->supporter; ?></td>
+<?php } ?>
+<td class="replycount centered"><?php echo $tck->replycount; ?></td>
+<?php if (!$cat->isSupport) { ?>
+<td class="viewcount centered"><?php echo $tck->views; ?></td>
+<?php } ?>
+<td class="latestpost">
+<a href="<?php echo $tck->latestlink; ?>" class="tstamp nowrap"><?php echo $tck->latesttstamp; ?><br />
+<?php echo $tck->latestposter; ?></a>
+</td>
+<?php if ($cat->isSupport || $hd->role>=HELPDESK_SUPPORTER) { ?>
+<td class="icons middle">
+
+<?php if ($tck->cutTicketLink) { ?>
+<a href="<?php echo $tck->cutTicketLink; ?>" title="<?php echo $text['cutticket']; ?>"><?php echo $hd->createImage('cut16',$text['cutticket'],'title="'.$text['cutticket'].'"'); ?></a>
+<?php } ?>
+<?php if ($tck->pasteLink) { ?>
+<a href="<?php echo $tck->pasteLink; ?>" title="<?php echo $text['paste']; ?>"><?php echo $hd->createImage('paste16',$text['paste'],'title="'.$text['paste'].'"'); ?></a>
+<?php } else { ?>
+<?php if ($tck->removeTicketLink) { ?>
+<a href="<?php echo $tck->removeTicketLink; ?>" title="<?php echo $text['delete']; ?>" onclick="if (!confirm('<?php echo $text['deleteTicketConfirm']; ?>')) return false;"><?php echo $hd->createImage('delete16',$text['delete'],'title="'.$text['delete'].'"'); ?></a>
+<?php } ?>
+<?php if ($tck->openTicketLink) { ?>
+<a href="<?php echo $tck->openTicketLink; ?>" title="<?php echo $text['open']; ?>"><?php echo $hd->createImage('close16',$text['open'],'title="'.$text['open'].'"'); ?></a>
+<?php } ?>
+<?php if ($tck->closeTicketLink) { ?>
+<a href="<?php echo $tck->closeTicketLink; ?>" title="<?php echo $text['close']; ?>"><?php echo $hd->createImage('open16',$text['close'],'title="'.$text['close'].'"'); ?></a>
+<?php } ?>
+<?php if ($tck->pinupTicketLink) { ?>
+<a href="<?php echo $tck->pinupTicketLink; ?>" title="<?php echo $text['pinup']; ?>"><?php echo $hd->createImage('unpinned16',$text['pinup'],'title="'.$text['pinup'].'"'); ?></a>
+<?php } ?>
+<?php if ($tck->unpinTicketLink) { ?>
+<a href="<?php echo $tck->unpinTicketLink; ?>" title="<?php echo $text['unpin']; ?>"><?php echo $hd->createImage('pinned16',$text['unpin'],'title="'.$text['unpin'].'"'); ?></a>
+<?php } ?>
+<?php if ($tck->publishTicketLink) { ?>
+<a href="<?php echo $tck->publishTicketLink; ?>" title="<?php echo $text['publish']; ?>"><?php echo $hd->createImage('unpublished16',$text['publish'],'title="'.$text['publish'].'"'); ?></a>
+<?php } ?>
+<?php if ($tck->unpublishTicketLink) { ?>
+<a href="<?php echo $tck->unpublishTicketLink; ?>" title="<?php echo $text['unpublish']; ?>"><?php echo $hd->createImage('published16',$text['unpublish'],'title="'.$text['unpublish'].'"'); ?></a>
+<?php } ?>
+<?php } // clipboard empty ?>
+</td>
+<?php } // if if cat->isSupport... ?>
+</tr>
+<?php } // foreach hd->tickets ?>
+
+</table>
+<div class="bottomcontrols controls middle">
+<?php echo $hd->pageNavigation; ?>
+<span class="functions">
+<?php echo $mainFuncs; ?>
+</span>
+</div>
+
+<?php } else { ?>
+<div class="helpdesk-notickets"><?php echo $text['notickets']; ?></div>
+<?php } // if count hd->tickets ?>
+
+<div class="breadcrumb"><?php echo $hd->breadcrumb; ?></div>
+
+</div>
+<!-- indexer::continue -->
