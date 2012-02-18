@@ -1,6 +1,6 @@
 <?php
 /**
- * TYPOlight Helpdesk :: Constants
+ * Contao Helpdesk :: Constants
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk

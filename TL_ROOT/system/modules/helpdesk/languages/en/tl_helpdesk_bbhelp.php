@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Language file for bbcode help (en)
+ * Contao Helpdesk :: Language file for bbcode help (en)
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk
@@ -10,7 +10,7 @@
 
 $GLOBALS['TL_LANG']['tl_helpdesk_bbhelp']['help'] = "
 
-[h1]TYPOlight Forum/Helpdesk - BBCode Quick Reference[/h1]
+[h1]Contao Forum/Helpdesk - BBCode Quick Reference[/h1]
 
 [h2]Text Formatting[/h2]
 
@@ -109,15 +109,15 @@ $GLOBALS['TL_LANG']['tl_helpdesk_bbhelp']['help'] = "
 [table=1]
 
 [tr][td]
-[raw][url]http://www.typolight.org[/url][/raw]
+[raw][url]http://www.Contao.org[/url][/raw]
 [/td][td]
-[url]http://www.typolight.org[/url]
+[url]http://www.Contao.org[/url]
 [/td][/tr]
 
 [tr][td]
-[raw][url=http://www.typolight.org]The Typolight CMS[/url][/raw]
+[raw][url=http://www.Contao.org]The Contao CMS[/url][/raw]
 [/td][td]
-[url=http://www.typolight.org]The Typolight CMS[/url]
+[url=http://www.Contao.org]The Contao CMS[/url]
 [/td][/tr]
 
 [tr][td]
@@ -146,23 +146,23 @@ $GLOBALS['TL_LANG']['tl_helpdesk_bbhelp']['help'] = "
 
 [tr][td]
 [b]Display image in original size:[/b]
-[raw][img]http://www.typolight.org/tl_files/images/logo.gif[/img][/raw]
+[raw][img]http://www.Contao.org/tl_files/images/logo.gif[/img][/raw]
 [/td][td]
-[img]http://www.typolight.org/tl_files/images/logo.gif[/img]
+[img]http://www.Contao.org/tl_files/images/logo.gif[/img]
 [/td][/tr]
 
 [tr][td]
 [b]Set height and width:[/b]
-[raw][img=90,120]http://www.typolight.org/tl_files/images/logo.gif[/img][/raw]
+[raw][img=90,120]http://www.Contao.org/tl_files/images/logo.gif[/img][/raw]
 [/td][td]
-[img=90,120]http://www.typolight.org/tl_files/images/logo.gif[/img]
+[img=90,120]http://www.Contao.org/tl_files/images/logo.gif[/img]
 [/td][/tr]
 
 [tr][td]
 [b]Set width only, height is proportional:[/b]
-[raw][img=100]http://www.typolight.org/tl_files/images/logo.gif[/img][/raw]
+[raw][img=100]http://www.Contao.org/tl_files/images/logo.gif[/img][/raw]
 [/td][td]
-[img=100]http://www.typolight.org/tl_files/images/logo.gif[/img]
+[img=100]http://www.Contao.org/tl_files/images/logo.gif[/img]
 [/td][/tr]
 
 [tr][td]

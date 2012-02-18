@@ -1,6 +1,6 @@
 <?php
 /**
- * TYPOlight Helpdesk :: Manually execute the email import batch.
+ * Contao Helpdesk :: Manually execute the email import batch.
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk

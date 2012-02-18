@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Language file for table tl_settings (en)
+ * Contao Helpdesk :: Language file for table tl_settings (en)
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk
@@ -69,8 +69,8 @@ $text['searchmax'] = array(
 	'Maximum number of best matches to return as search result set.'
 );
 $text['tlsearch'] = array(
-	'Enable TYPOlight search', 
-	'Enables indexing of the topics/tickets by the TYPOlight search engine, in addition to helpdesks internal search.'
+	'Enable Contao search', 
+	'Enables indexing of the topics/tickets by the Contao search engine, in addition to helpdesks internal search.'
 );
 $text['recenthours'] = array(
 	'Recent time frame', 

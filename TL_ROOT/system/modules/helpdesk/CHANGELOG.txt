@@ -1,6 +1,10 @@
 ============================
-TYPOlight Helpdesk CHANGELOG
+Contao Helpdesk CHANGELOG
 ============================
+
+Version 1.3.1 (2012-02-03)
+--------------------------
+- Allthough helpdesk is declared to be compatible from 2.7.6 to 2.10.0
 
 Version 1.3.0 (2010-02-16)
 --------------------------
@@ -19,8 +23,8 @@ Version 1.3.0 (2010-02-16)
   
 Version 1.2.0 (2010-02-10)
 --------------------------
-- Added a switch to the settings to enable TYPOlight search. When this is enabled,
-  the forum/helpdesk messages will get included in the regular TYPOlight site search.
+- Added a switch to the settings to enable Contao search. When this is enabled,
+  the forum/helpdesk messages will get included in the regular Contao site search.
   Rebuild the search index in the backends maintenance page after enabling or
   disabling this option.
   
@@ -28,7 +32,7 @@ Version 1.2.0 (2010-02-10)
   it. Find the changes in the original template in the lines containing $objPage
   and $hd->settings->tlsearch.
 
-  Note that enabling this option can significantly increase the TYPOlight search
+  Note that enabling this option can significantly increase the Contao search
   index tables tl_search and tl_search_index, as well as the time taken to rebuild
   the index in the backend maintenance. The amount depends on how many topics/tickets
   are visible in all frontend helpdesk blocks.
@@ -125,13 +129,13 @@ Version 0.9.0 (2008-11-03)
   - Limit for # of returned matches in search results can now be configured in
     the helpdesk settings instead of editing HelpdeskConstants.php.
 
-- Member profile linking (usable only from TYPOlight 2.6.2 up)
+- Member profile linking (usable only from Contao 2.6.2 up)
 
   - In the module "Forum/Helpdesk Block" there is a selection whom to display
     member profile links (nobody, moderators/supporters, users/clients or
 	everybody). 
 	
-  - Another text input is for entering the page URL of the standard TYPOlight 
+  - Another text input is for entering the page URL of the standard Contao 
     member list module (without the member id which gets appended 
     automatically). The URL may be full qualified, or relative to the current 
     site root:
@@ -206,7 +210,7 @@ Version 0.8.0 (2008-08-22)
 - Added color tags to bbcode parser.
 - Added repeat delays to posting as flood prevention.
 - Added repeat delays to search to limit server load (DOS hampering).
-- Prevent TYPOlight insert tags from being processed within messages.
+- Prevent Contao insert tags from being processed within messages.
 - Fixed that categories did not automatically get marked as read after viewing
   last unread ticket.
 - Fixed bbcode parser bug on invalid tag [text]
@@ -254,7 +258,7 @@ Version 0.6.5 (2008-04-22)
 --------------------------
 - Added a logging feature to enable tracking down issues with the
   notification and email import functions. The logging can be controlled in the
-  TYPOlight settings and will be written to /system/logs/HelpdeskNotify.log
+  Contao settings and will be written to /system/logs/HelpdeskNotify.log
   and /system/logs/HelpdeskImport.log (make sure to have write permissions).
 - Added script HelpdeskNotifyExec.php to run the notification script without
   cron component.
@@ -304,7 +308,7 @@ Version 0.6.1 (2007-11-24)
   from the user himself.
 - Fixed javascript error in message list when using internet explorer 6.
 - Cleaned up license terms and copyright notices.
-- Lightened up default icons to be more cmpliant with the TYPOlight default
+- Lightened up default icons to be more cmpliant with the Contao default
   theme; moved previous icons to the 'classic' theme.
 
 Version 0.6.0 (2007-11-14)
@@ -316,7 +320,7 @@ Version 0.6.0 (2007-11-14)
   functions are only shown on the index page.
 - Added function to display unread topics/threads on index page (block and
   page wide).
-- Moved some category settings to typolight general settings:
+- Moved some category settings to Contao general settings:
   - Number of topics/tickets per page
   - Number of messages per page
   - Frontend images directory.

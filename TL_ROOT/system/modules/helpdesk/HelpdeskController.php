@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Class HelpdeskController
+ * Contao Helpdesk :: Class HelpdeskController
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk
@@ -48,7 +48,7 @@ class HelpdeskController extends Controller
 			$strTemplate	= 'helpdesk_message';	
 			$this->ident	= 'error';
 			$this->compiler	= 'message';
-			$this->Session->set('HELPDESK_MESSAGE_TEXT', 'Please notify system admin to update TYPOlight database.');
+			$this->Session->set('HELPDESK_MESSAGE_TEXT', 'Please notify system admin to update Contao database.');
 			$this->Session->set('HELPDESK_MESSAGE_BUTTONS', null);
 			$GLOBALS['HELPDESKSKIP'] = true;
 			return;

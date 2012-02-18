@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Class HelpdeskNotify
+ * Contao Helpdesk :: Class HelpdeskNotify
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk
@@ -393,7 +393,7 @@ class HelpdeskNotify extends Backend
 				'<head>'.$nl.
 				'<meta http-equiv="Content-Type" content="text/html; charset='.$GLOBALS['TL_CONFIG']['characterSet'].'">'.$nl.
 				'<META http-equiv="Content-Style-Type" content="text/css">'.$nl.
-				'<meta name="Generator" content="TYPOlight Helpdesk">'.$nl.
+				'<meta name="Generator" content="Contao Helpdesk">'.$nl.
 				'<link rel="stylesheet" type="text/css" href="system/themes/'.$this->getTheme().'/basic.css" />'.$nl.
 				'<link rel="stylesheet" type="text/css" href="'.HelpdeskTheme::file('message.css').'" />'.$nl.
 				'<title>'.$sub.'</title>'.$nl.

@@ -1,6 +1,6 @@
 <?php
 /**
- * TYPOlight Helpdesk :: Class DC_HelpdeskTable
+ * Contao Helpdesk :: Class DC_HelpdeskTable
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk

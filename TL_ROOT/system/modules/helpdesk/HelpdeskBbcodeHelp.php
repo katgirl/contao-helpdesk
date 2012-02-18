@@ -1,6 +1,6 @@
 <?php
 /**
- * TYPOlight Helpdesk :: BBCode help popup
+ * Contao Helpdesk :: BBCode help popup
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk
@@ -20,7 +20,7 @@ require_once('../../initialize.php');
  *
  * Back end help wizard.
  * @copyright  Leo Feyer 2005
- * @author     Leo Feyer <leo@typolight.org>
+ * @author     Leo Feyer <leo@Contao.org>
  * @package    Controller
  */
 class HelpdeskBbcodeHelp extends Controller

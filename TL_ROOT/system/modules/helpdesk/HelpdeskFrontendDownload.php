@@ -1,6 +1,6 @@
 <?php
 /**
- * TYPOlight Helpdesk :: Class HelpdeskFrontendDownload
+ * Contao Helpdesk :: Class HelpdeskFrontendDownload
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk

@@ -1,6 +1,6 @@
 <?php
 /**
- * TYPOlight Helpdesk :: Download file attachments from backend
+ * Contao Helpdesk :: Download file attachments from backend
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk

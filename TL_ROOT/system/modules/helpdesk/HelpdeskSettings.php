@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Settings
+ * Contao Helpdesk :: Settings
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk
@@ -53,7 +53,7 @@ class HelpdeskSettings extends System
 		$this->setInt('feedmax', 10);
 		$this->setInt('feedlimit', 150);
 		$this->setText('feedlink', 'helpdesk');
-		$this->setText('feedtitle', 'TYPOlight Syndication');
+		$this->setText('feedtitle', 'Contao Syndication');
 		$this->setText('feeddescription', 'RSS feeds from the forums and helpdesks');
 		$this->setInt('logging', HELPDESK_NOLOG);
 		$this->migrate();

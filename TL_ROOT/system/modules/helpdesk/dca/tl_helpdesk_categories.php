@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Data container array for table tl_helpdesk_categories
+ * Contao Helpdesk :: Data container array for table tl_helpdesk_categories
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk
@@ -223,7 +223,7 @@ $GLOBALS['TL_DCA']['tl_helpdesk_categories'] = array(
 		),
 		'notify_name' => array(
 			'label'				=>	&$GLOBALS['TL_LANG']['tl_helpdesk_categories']['notify_name'],
-			'default'			=>	'TYPOlight Forum/Helpdesk Mailer',
+			'default'			=>	'Contao Forum/Helpdesk Mailer',
 			'exclude'			=>	true,
 			'inputType'			=>	'text',
 			'eval'				=>	array('maxlength'=>100)
@@ -243,7 +243,7 @@ $GLOBALS['TL_DCA']['tl_helpdesk_categories'] = array(
 		),
 		'notify_be_url' => array(
 			'label'				=>	&$GLOBALS['TL_LANG']['tl_helpdesk_categories']['notify_be_url'],
-			'default'			=>	'http://www.example.com/typolight/main.php?do=helpdesk',
+			'default'			=>	'http://www.example.com/Contao/main.php?do=helpdesk',
 			'exclude'			=>	true,
 			'inputType'			=>	'text',
 			'eval'				=>	array('maxlength'=>100)

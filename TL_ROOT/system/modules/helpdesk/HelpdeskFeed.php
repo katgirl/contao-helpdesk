@@ -1,6 +1,6 @@
 <?php 
 /**
- * TYPOlight Helpdesk :: Class HelpdeskFeed
+ * Contao Helpdesk :: Class HelpdeskFeed
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk
@@ -93,7 +93,7 @@ class HelpdeskFeed extends Frontend
 						"\t<link>" . $this->Environment->base . "</link>\n".
 						"\t<language>" . $lng . "</language>\n".
 						"\t<pubDate>" . gmdate('r',$q->msg_tstamp) . "</pubDate>\n".
-						"\t<generator>TYPOlight Helpdesk</generator>\n";
+						"\t<generator>Contao Helpdesk</generator>\n";
 				} // if
 				$fe_url = trim($cat->cat_notify_fe_url);
 				$link = ($fe_url!='') ?	$fe_url.'/message/'.$q->msg_id.$GLOBALS['TL_CONFIG']['urlSuffix'] : $this->Environment->base;

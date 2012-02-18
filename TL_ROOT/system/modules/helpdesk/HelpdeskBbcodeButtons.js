@@ -1,5 +1,5 @@
 /**
- * TYPOlight Helpdesk :: bbcode button javascript
+ * Contao Helpdesk :: bbcode button javascript
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk

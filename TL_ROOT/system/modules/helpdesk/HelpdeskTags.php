@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Insert tags
+ * Contao Helpdesk :: Insert tags
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk

@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Class HelpdeskTheme
+ * Contao Helpdesk :: Class HelpdeskTheme
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk
@@ -22,17 +22,17 @@ class HelpdeskTheme
 		return self::themepath.'default/'. $file;
 	} // if
 	
-	public static function image($file, &$png)
+	public static function image($file)
 	{
 		$theme = $GLOBALS['TL_CONFIG']['backendTheme'];
 		if (strlen($theme) && $theme!='default') {
 			$url = self::themepath.$theme.'/images/';
 			if (is_file(TL_ROOT.'/'.$url.$file.'.png')) return $url.$file.'.png';
-			if (is_file(TL_ROOT.'/'.$url.$file.'.gif')) { $png = false; return $url.$file.'.gif'; }
+			if (is_file(TL_ROOT.'/'.$url.$file.'.gif')) return $url.$file.'.gif'; 
 		} // if
 		$url = self::themepath.'default/images/';
 		if (is_file(TL_ROOT.'/'.$url.$file.'.png')) return $url.$file.'.png';
-		if (is_file(TL_ROOT.'/'.$url.$file.'.gif')) { $png = false; return $url.$file.'.gif'; }
+		if (is_file(TL_ROOT.'/'.$url.$file.'.gif')) return $url.$file.'.gif';
 		return $url.'default.png';
 	} // image
 	

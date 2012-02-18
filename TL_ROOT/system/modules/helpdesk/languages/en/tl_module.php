@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Language file for table tl_module (en)
+ * Contao Helpdesk :: Language file for table tl_module (en)
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk
@@ -39,7 +39,7 @@ $GLOBALS['TL_LANG']['tl_module']['helpdesk_profmode_options'] = array(
 );
 $GLOBALS['TL_LANG']['tl_module']['helpdesk_profpage'] = array(
 	'Profile page name', 
-	"Page name/url of the TYPOlight member profile, without the member ID parameter.<br/>\n" .
+	"Page name/url of the Contao member profile, without the member ID parameter.<br/>\n" .
 	"Example: <em>http://www.example.com/memberlist.html</em>"
 );
 

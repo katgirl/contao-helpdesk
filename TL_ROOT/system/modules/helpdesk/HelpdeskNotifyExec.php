@@ -1,6 +1,6 @@
 <?php
 /**
- * TYPOlight Helpdesk :: Manually run the notification batch.
+ * Contao Helpdesk :: Manually run the notification batch.
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk

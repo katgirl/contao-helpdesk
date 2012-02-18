@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Data container array for content element tl_content
+ * Contao Helpdesk :: Data container array for content element tl_content
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk

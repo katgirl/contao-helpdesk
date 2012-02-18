@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Class HelpdeskFrontend
+ * Contao Helpdesk :: Class HelpdeskFrontend
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk

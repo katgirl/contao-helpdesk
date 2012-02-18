@@ -1,4 +1,4 @@
-TYPOlight Forum and Helpdesk - License Conditions
+Contao Forum and Helpdesk - License Conditions
 -------------------------------------------------
 
 This software was developed by Peter Koch (Acenes) and is property of:
@@ -10,8 +10,8 @@ This software was developed by Peter Koch (Acenes) and is property of:
 
 Author Contact:
 
-	By email: peter@typolight.org
-	In the TYPOlight forum at http://www.typolight.org: username "Acenes"
+	By email: peter@contao.org
+	In the Contao forum at http://www.contao.org: username "Acenes"
 
 Disclaimer:
 

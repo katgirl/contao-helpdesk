@@ -1,6 +1,6 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 /**
- * TYPOlight Helpdesk :: Language file for table tl_helpdesk_categories (en)
+ * Contao Helpdesk :: Language file for table tl_helpdesk_categories (en)
  *
  * NOTE: this file was edited with tabs set to 4.
  * @package Helpdesk
@@ -46,7 +46,7 @@ $hdesk_text['notify_fe_url']	= array('Frontend URL base',
 										"Used for frontend notification, RSS feeds and article commenting.<br/>\n".
 										"Leave empty to disable these features.");
 $hdesk_text['notify_be_url']	= array('Backend URL base',
-										'Should be something like <em>http://www.yoursite.com/typolight/main.php?do=helpdesk</em><br />'.
+										'Should be something like <em>http://www.yoursite.com/Contao/main.php?do=helpdesk</em><br />'.
 										'Leave empty to disable backend user notifications.');
 $hdesk_text['notify_newsubj']	= array('Subject for new topics', 'You may use the tags [[poster]], [[subject]] and [[replytag]].');
 $hdesk_text['notify_newtext']	= array('Text body for new topics', 'You may use the tags [[poster]], [[subject]], [[message]] and [[link]].');
@@ -122,7 +122,7 @@ $hdesk_text['notify_text']['new'] =
 The ticket is located at:<br />
 [[link]]<br />
 ---<br />
-TYPOlight Helpdesk Mailer<br />
+Contao Helpdesk Mailer<br />
 (Please retain the reply tag in the subject when replying by email)<br />';
 
 $hdesk_text['notify_text']['reply'] = 
@@ -133,7 +133,7 @@ $hdesk_text['notify_text']['reply'] =
 The message is located at:<br />
 [[link]]<br />
 ---<br />
-TYPOlight Helpdesk Mailer<br />
+Contao Helpdesk Mailer<br />
 (Please retain the reply tag in the subject when replying by email)<br />';
 
 ?>

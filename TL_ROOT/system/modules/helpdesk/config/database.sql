@@ -1,4 +1,4 @@
--- TYPOlight Helpdesk :: Database setup file
+-- Contao Helpdesk :: Database setup file
 --
 -- NOTE: this file was edited with tabs set to 4.
 -- Copyright (C) 2007-2010 by Peter Koch, IBK Software AG
@@ -9,10 +9,10 @@
 -- **********************************************************
 -- *      ! ! !   I M P O R T A N T  N O T E   ! ! !        *
 -- *                                                        *
--- * Do not import this file manually! Use the TYPOlight    *
+-- * Do not import this file manually! Use the Contao    *
 -- * install tool to create and maintain database tables:   *
 -- * - Point your browser to                                *
--- *   http://www.yourdomain.com/typolight/install.php      *
+-- *   http://www.yourdomain.com/Contao/install.php      *
 -- * - Enter the installation password and click "Login"    *
 -- * - Scroll down and click button "Update Database"       *
 -- **********************************************************
@@ -44,7 +44,7 @@ CREATE TABLE `tl_helpdesk_settings` (
   `feedmax` int(6) NOT NULL default '10',
   `feedlimit` int(6) NOT NULL default '150',
   `feedlink` varchar(64) NOT NULL default 'helpdesk',
-  `feedtitle` varchar(64) NOT NULL default 'TYPOlight Syndication',
+  `feedtitle` varchar(64) NOT NULL default 'Contao Syndication',
   `feeddescription` varchar(255) NOT NULL default 'RSS feeds from the forums and helpdesks',
   `logging` char(1) NOT NULL default '0',
   `tot_tickets` int(10) unsigned NOT NULL default '0',
