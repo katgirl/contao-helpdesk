@@ -41,7 +41,7 @@ class HelpdeskNotify extends Backend
 				$this->loglevel += $inc;
 				if ($this->loglevel < 0) $this->loglevel = 0;
 			} // if
-			$lines = split("\n", str_replace("\r", "", $message));
+			$lines = explode("\n", str_replace("\r", "", $message));
 			foreach ($lines as $line) 
 				error_log(
 					sprintf("[%s] %s%s\n", date('Y-m-d H:i:s'), str_repeat('  ', $this->loglevel), $line), 
@@ -393,7 +393,7 @@ class HelpdeskNotify extends Backend
 				'<head>'.$nl.
 				'<meta http-equiv="Content-Type" content="text/html; charset='.$GLOBALS['TL_CONFIG']['characterSet'].'">'.$nl.
 				'<META http-equiv="Content-Style-Type" content="text/css">'.$nl.
-				'<meta name="Generator" content="Contao Helpdesk">'.$nl.
+				'<meta name="generator" content="Bluefish 2.2.2" >'.$nl.
 				'<link rel="stylesheet" type="text/css" href="system/themes/'.$this->getTheme().'/basic.css" />'.$nl.
 				'<link rel="stylesheet" type="text/css" href="'.HelpdeskTheme::file('message.css').'" />'.$nl.
 				'<title>'.$sub.'</title>'.$nl.
