@@ -320,21 +320,8 @@ class HelpdeskComments extends ContentElement
 		if (isset($params[0]) && is_array($params[0])) 
 			$params = array_values($params[0]);
 		
-		global $objPage;
-		$arrRow = array(
-				'id' => $objPage->id,
-				'alias' => $objPage->alias
-		);
-		
-		if (empty($params))
-		{
-			return $this->generateFrontendUrl($arrRow);
-		}
-		else 
-		{
-			$strParams = '/' . implode('/', $params);
-			return $this->generateFrontendUrl($arrRow, $strParams);
-		}
+		$strParams = empty($params) ? null : ('/' . implode('/', $params));
+		return $this->generateFrontendUrl($GLOBALS['objPage']->row(), $strParams);
 	} // createUrl
 
 	/**
