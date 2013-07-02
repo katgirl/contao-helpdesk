@@ -81,11 +81,22 @@ class HelpdeskFrontendTitle extends Module
 	{
 		$params = func_get_args();
 		if (isset($params[0]) && is_array($params[0])) $params = array_values($params[0]);
-		$url =
-			($GLOBALS['TL_CONFIG']['rewriteURL'] ? '' : 'index.php/') . 
-			$this->getPageIdFromUrl();
-		foreach ($params as $param) $url .= '/' . $param;
-		return $url . $GLOBALS['TL_CONFIG']['urlSuffix'];
+
+		global $objPage;
+		$arrRow = array(
+				'id' => $objPage->id,
+				'alias' => $objPage->alias
+		);
+		
+		if (empty($params))
+		{
+			return $this->generateFrontendUrl($arrRow);
+		}
+		else 
+		{
+			$strParams = '/' . implode('/', $params);
+			return $this->generateFrontendUrl($arrRow, $strParams);
+		}
 	} // createUrl
 	
 } // class HelpdeskFrontendTitle
