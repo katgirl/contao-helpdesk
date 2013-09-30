@@ -41,8 +41,10 @@ class HelpdeskNotify extends Backend
 				$this->loglevel += $inc;
 				if ($this->loglevel < 0) $this->loglevel = 0;
 			} // if
-			$lines = preg_split("\n", str_replace("\r", "", $message));
-			foreach ($lines as $line) 
+			
+                        $arrLines = explode("\n", str_replace("\r", "", $message));   
+                        
+                        foreach ($arrLines as $line) 
 				error_log(
 					sprintf("[%s] %s%s\n", date('Y-m-d H:i:s'), str_repeat('  ', $this->loglevel), $line), 
 					3, 
