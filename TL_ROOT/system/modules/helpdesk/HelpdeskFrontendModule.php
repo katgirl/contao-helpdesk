@@ -116,34 +116,15 @@ class HelpdeskFrontendModule extends Module
 	
 	/**
 	 * Create frontend url for hyperlink.
-	 * For odd # of parameters, the first argument is taken as base.
-	 * For even # of parameters, tha base is the current page.
 	 */
 	public function createUrl()
 	{
 		$params = func_get_args();
 		if (isset($params[0]) && is_array($params[0])) 
 			$params = array_values($params[0]);
-		$rewr = $GLOBALS['TL_CONFIG']['rewriteURL'];
-		$disa = $GLOBALS['TL_CONFIG']['disableAlias'];
-		$url = '';
-		if (count($params) & 1)
-			$url = array_shift($params);
-		else {
-			if ($disa) 
-				$url = 'index.php?id=';
-			else
-				if (!$rewr) $url = 'index.php/';
-			$url .= $this->getPageIdFromUrl();
-		} // if
-		if ($disa) {
-			for($i = 0; $i < count($params); $i += 2)
-				$url .= '&' . $params[$i] . '=' . $params[$i+1];
-		} else {
-			foreach ($params as $param) $url .= '/' . $param;
-			$url .= $GLOBALS['TL_CONFIG']['urlSuffix'];
-		} // if
-		return $url;
+
+		$strParams = empty($params) ? null : ('/' . implode('/', $params));
+		return $this->generateFrontendUrl($GLOBALS['objPage']->row(), $strParams);
 	} // createUrl
 
 } // class HelpdeskFrontendModule
